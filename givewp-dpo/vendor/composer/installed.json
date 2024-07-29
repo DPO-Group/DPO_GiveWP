@@ -2,23 +2,23 @@
     "packages": [
         {
             "name": "dpo/dpo-pay-common",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DPO-Group/DPO-Pay-Common.git",
-                "reference": "89ac3f3f89ae3cf260d54d88e2d0891cb77bc25b"
+                "reference": "625e39600468daff1940ad02ec1113f8adc86ab6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DPO-Group/DPO-Pay-Common/zipball/89ac3f3f89ae3cf260d54d88e2d0891cb77bc25b",
-                "reference": "89ac3f3f89ae3cf260d54d88e2d0891cb77bc25b",
+                "url": "https://api.github.com/repos/DPO-Group/DPO-Pay-Common/zipball/625e39600468daff1940ad02ec1113f8adc86ab6",
+                "reference": "625e39600468daff1940ad02ec1113f8adc86ab6",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.0"
             },
-            "time": "2024-05-13T16:44:35+00:00",
+            "time": "2024-05-15T04:03:04+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -40,7 +40,7 @@
             "homepage": "https://github.com/DPO-Group/DPO-Pay-Common",
             "support": {
                 "issues": "https://github.com/DPO-Group/DPO-Pay-Common/issues",
-                "source": "https://github.com/DPO-Group/DPO-Pay-Common/tree/v1.0.0"
+                "source": "https://github.com/DPO-Group/DPO-Pay-Common/tree/v1.0.1"
             },
             "install-path": "../dpo/dpo-pay-common"
         }

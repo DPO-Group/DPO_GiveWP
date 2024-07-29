@@ -1,0 +1,10 @@
+=====================================
+Version : Date : Description
+=====================================
+
+= 1.0.1 - 2024-07-29 =
+* Include transaction source in DPO Pay pay request.
+* Update to DPO Pay Common Class for Modules v1.0.1.
+
+= 1.0.0 - 2024-05-14 =
+* Initial release.
