@@ -3,7 +3,7 @@
  * Plugin Name: DPO Pay for GiveWP
  * Plugin URI: https://github.com/DPO-Group/DPO_GiveWP
  * Description: Integrates GiveWP with DPO Pay, an African payment gateway.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.6
  * Requires PHP: 8.0
  * Author: DPO Group

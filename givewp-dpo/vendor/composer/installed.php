@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '266ed34f09d2fef3ccc4f55616fe18162cc37e32',
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
+        'reference' => '61c930339c2ee06a5778cc1ab4bcc25da348f6a7',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,18 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '266ed34f09d2fef3ccc4f55616fe18162cc37e32',
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => '61c930339c2ee06a5778cc1ab4bcc25da348f6a7',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'dpo/dpo-pay-common' => array(
-            'pretty_version' => 'v1.0.0',
-            'version' => '1.0.0.0',
-            'reference' => '89ac3f3f89ae3cf260d54d88e2d0891cb77bc25b',
+            'pretty_version' => 'v1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => '625e39600468daff1940ad02ec1113f8adc86ab6',
             'type' => 'library',
             'install_path' => __DIR__ . '/../dpo/dpo-pay-common',
             'aliases' => array(),

@@ -189,6 +189,7 @@ class DpoGive extends PaymentGateway
             'customerEmail'     => $donation->email,
             'customerZip'       => $donation->billingAddress->zip,
             'customerAddress'   => $donation->billingAddress->address1 . ' ' . $donation->billingAddress->address2,
+            'transactionSource' => 'givewp',
         ];
 
         if ($ptlLimit) {

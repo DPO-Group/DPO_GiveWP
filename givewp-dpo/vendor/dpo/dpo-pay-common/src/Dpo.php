@@ -75,13 +75,13 @@ class Dpo
         $serviceDesc = 'test';
 
         // Create each product service xml
-        $service .= <<<POSTXML
+        $service .= <<<XML
             <Service>
                 <ServiceType>{$data['serviceType']}</ServiceType>
                 <ServiceDescription>$serviceDesc</ServiceDescription>
                 <ServiceDate>$serviceDate</ServiceDate>
             </Service>
-POSTXML;
+XML;
 
         $customerPhone             = preg_replace('/\D/', '', $data['customerPhone'] ?? '');
         $data['customerDialCode']  = $data['customerDialCode'] ?? '';
@@ -93,7 +93,7 @@ POSTXML;
         $data['customerFirstName'] = $data['customerFirstName'] ?? '';
         $data['customerLastName']  = $data['customerLastName'] ?? '';
 
-        $postXml = <<<POSTXML
+        $postXml = <<<XML
         <?xml version="1.0" encoding="utf-8"?><API3G>
         <CompanyToken>{$data['companyToken']}</CompanyToken>
         <Request>createToken</Request>
@@ -112,18 +112,22 @@ POSTXML;
         <RedirectURL>{$data['redirectURL']}</RedirectURL>
         <BackURL>{$data['backURL']}</BackURL>
         <customerEmail>{$data['customerEmail']}</customerEmail>
-POSTXML;
+XML;
+
+        if (!empty($data['transactionSource'])) {
+            $postXml .= "<TransactionSource>{$data['transactionSource']}</TransactionSource>";
+        }
 
         if (!empty($data['PTL'])) {
             $postXml .= "<PTL>{$data['PTL']}</PTL>";
             $postXml .= "<PTLtype>{$data['PTLtype']}</PTLtype>";
         }
 
-        $postXml .= <<<POSTXML
+        $postXml .= <<<XML
         </Transaction>
         <Services>$service</Services>
         </API3G>
-POSTXML;
+XML;
 
         $error = '';
 
@@ -207,14 +211,14 @@ POSTXML;
                         CURLOPT_TIMEOUT        => 30,
                         CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
                         CURLOPT_CUSTOMREQUEST  => "POST",
-                        CURLOPT_POSTFIELDS     => <<<FIELDS
+                        CURLOPT_POSTFIELDS     => <<<XML
 <?xml version=\"1.0\" encoding=\"utf-8\"?>
 <API3G>
 <CompanyToken>$companyToken</CompanyToken>
 <Request>verifyToken</Request>
 <TransactionToken>$transToken</TransactionToken>
 </API3G>
-FIELDS,
+XML,
                         CURLOPT_HTTPHEADER     => ["cache-control: no-cache",],
                     )
                 );

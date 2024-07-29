@@ -1,6 +1,6 @@
 {
   "require": {
-    "dpo/dpo-pay-common": "^1.0"
+    "dpo/dpo-pay-common": "v1.0.1"
   },
   "autoload": {
     "psr-4": {
