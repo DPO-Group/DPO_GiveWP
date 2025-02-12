@@ -121,8 +121,7 @@ class DpoGive extends PaymentGateway
                 if (!$donation) {
                     $donation = Donation::find((int)$verify->CompanyRef->__toString());
                 }
-                if ((int)$donation->amount->getAmount(
-                    ) !== (int)(((float)$verify->TransactionAmount - (float)$verify->AllocationAmount) * 100)) {
+                if ((int)$donation->amount->getAmount() !== (int)(floatval($verify->TransactionAmount) * 100)) {
                     // Amounts don't match
                     $donationNote = new DonationNote(
                         [
